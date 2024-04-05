@@ -1,0 +1,16 @@
+export const towns = [
+{value:2000,label:'الكل'},
+{value:0,label:'الرياض'},
+{value:1,label:'مكة المكرمة'},
+{value:2,label:'المدينة المنورة'},
+{value:3,label:'القصيم'},
+{value:4,label:'الشرقية'},
+{value:5,label:'عسير'},
+{value:6,label:'تبوك'},
+{value:7,label:'حائل'},
+{value:8,label:'لحدود الشمالية'},
+{value:9,label:'جازان'},
+{value:10,label:'نجران'},
+{value:11,label:'الباحة'},
+{value:12,label:'الجوف'},
+]

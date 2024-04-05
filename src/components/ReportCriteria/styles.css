@@ -1,0 +1,109 @@
+label{
+  font-weight: 600;
+}
+.hero{
+  height: auto;
+}
+.is-shown{
+  display: block !important;
+}
+
+.toggleCallout{
+  display: none ;
+}
+.axis text {            
+  font-weight: 500;
+}
+
+
+.positive {
+color: #3cca71;
+}
+
+.negative {
+color: #cc4b37;
+}
+
+.tick {
+direction: rtl !important;
+}
+.x {
+font-size: 70% !important;
+}
+
+.y {
+font-size: 70% !important;
+}
+
+
+.smaller {
+font-size:65% !important;
+}
+
+.top-bar {
+padding-bottom: 0px !important;
+}
+.chart-title{
+font-size: 120% !important;
+}
+.typespan{
+font-weight: 700;
+
+}
+.button:focus {
+ background-color: #1779ba;
+}
+
+.chart-wrapper, .datepickerdiv{
+font-size: 14px;
+}
+
+@media screen and (max-width:39.9375em) {
+/* mobile */
+.dashboard-number-value {
+font-size: 260%;
+}
+.vertical_space{
+margin-top: 3px!important;
+}
+#fatra{
+}
+
+.tick {
+font-weight: bold !important;
+}
+.x {
+font-size: 57% !important;
+}
+
+.y {
+font-size: 79% !important;
+}
+
+}
+/* quick fix hack*/
+@media only screen and (max-width: 1100px) and (min-width: 780px)  {
+.dashboard-number-value {
+font-size: 260%;
+}
+
+.dashboard-number-area {  
+font-size: 90%;  
+}
+.dashboard-number-delta {
+font-size: 90%;  
+}
+}
+.small_label{
+text-align: center;
+position:relative;
+bottom: 20px; 
+/*font-size: 85%;*/
+color: grey;
+padding-bottom: 5px;
+}
+
+.react-datepicker-wrapper {
+    @apply w-full;
+  }
+  

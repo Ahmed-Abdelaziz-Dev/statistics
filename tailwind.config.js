@@ -5,8 +5,13 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend:{
+      fontFamily: {
+        'main': ['"Helvetica Neue"', 'Helvetica', 'Roboto', 'Arial', 'sans-serif'],
+      }
+    },
   },
+  
   plugins: [],
 }
 
