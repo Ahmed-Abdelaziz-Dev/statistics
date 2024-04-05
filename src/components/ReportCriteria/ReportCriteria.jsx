@@ -8,9 +8,9 @@ const ReportCriteria = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   return (
-    <div className="p-5 font-main">
+    <div className="font-main">
       <div
-        className="border-2 border-[#cacaca] p-3  pb-8 space-y-4"
+        className="border-[1px] border-[#cacaca] p-3 pb-8 space-y-4"
         id="panel"
         dir="rtl"
       >
@@ -19,11 +19,11 @@ const ReportCriteria = () => {
         </button>
         <p className="text-[2.5rem] ">خيارات اللوحة</p>
         <div className="row">
-          <div className="flex items-center small-12 medium-12 large-6 columns remove-padding">
-            <div className="w-1/4 small-3 medium-2 large-4 columns remove-padding">
+          <div className="flex items-center ">
+            <div className="w-1/4 ">
               <label className="middle">المنطقة: </label>
             </div>
-            <div className="w-1/4 small-9 medium-6 large-7  columns remove-right-padding end">
+            <div className="w-1/4 ">
               <Dropdown
                 defaultValue={selectedOption}
                 onChange={setSelectedOption}
@@ -33,8 +33,8 @@ const ReportCriteria = () => {
           </div>
         </div>
         <div className="w-full row">
-          <div className="w-full flex small-12 medium-12 large-6 columns remove-padding">
-            <div className="small-3 medium-2 large-4 columns remove-padding w-1/4">
+          <div className="w-full flex ">
+            <div className=" w-1/4">
               <label className="middle">الفترة الزمنية: </label>
             </div>
             <div className="w-1/4">
