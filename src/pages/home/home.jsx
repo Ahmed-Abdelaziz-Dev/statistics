@@ -1,9 +1,18 @@
 import { useState } from "react";
 import ReportCriteria from "../../components/ReportCriteria/ReportCriteria";
 import BarChart from "../../components/BarChart/BarChart";
+import useGetBarCharData from "../../hooks/useGetBarCharData";
+import moment from "moment";
 
 const Home = () => {
   const [isShowReportCriteria, setIsShowReportCriteria] = useState(false);
+  const [reportCriteria, setReportCriteria] = useState({
+    start_date: moment(new Date()).format("YYYY-MM-DD"),
+    city: "الكل",
+    state: 2000,
+  });
+  const { data, isLoading, isError } = useGetBarCharData(reportCriteria);
+
   return (
     <>
       <div className=" font-main p-5" dir="rtl">
@@ -19,7 +28,10 @@ const Home = () => {
                   <i className="fas fa-sliders-h text-lg text-gray-900"></i>{" "}
                 </b>{" "}
                 <span>خيارات البحث:</span>
-                <span>منطقة تبوك للفترة الزمنية: يوم 04/01/2022</span>{" "}
+                <span>
+                  منطقة {reportCriteria.city} للفترة الزمنية: يوم
+                  {reportCriteria.start_date}
+                </span>{" "}
                 <button
                   type="button"
                   className=" button text-sm m-0 bg-[#1779ba] text-white p-2"
@@ -31,8 +43,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {isShowReportCriteria && <ReportCriteria />}
-        <BarChart />
+        {isShowReportCriteria && (
+          <ReportCriteria setReportCriteria={setReportCriteria} />
+        )}
+        <BarChart data={data} />
       </div>
     </>
   );

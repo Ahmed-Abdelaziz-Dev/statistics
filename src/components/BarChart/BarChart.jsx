@@ -18,7 +18,9 @@ ChartJS.register(
   Legend
 );
 
-const BarChart = () => {
+const BarChart = (chartData, title) => {
+  const titlePlaceholder =
+    "مقارنة عدد الصفقات بالفترة المماثلة من الأعوام الماضية";
   const data = {
     labels: [
       "04/01/2016",
@@ -46,8 +48,8 @@ const BarChart = () => {
   const options = {
     plugins: {
       title: {
-        display: false,
-        text: "Stacked Bar Chart",
+        display: true,
+        text: titlePlaceholder,
       },
       legend: {
         display: false,
@@ -77,7 +79,14 @@ const BarChart = () => {
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return (
+    <>
+      <Bar data={data} options={options} />
+      <span>
+        * عطلة نهاية الأسبوع والإجازات الرسمية يقل أو لا يتم فيها تسجيل الصفقات
+      </span>
+    </>
+  );
 };
 
 export default BarChart;

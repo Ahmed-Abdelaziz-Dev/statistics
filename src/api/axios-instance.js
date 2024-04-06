@@ -3,8 +3,7 @@ import axios from "axios";
 const abortController = new AbortController();
 
 const axiosInstance = axios.create({
-  baseURL: "",
-  withCredentials: true,
+  baseURL: "https://api.aqarsas.sa/",
   signal: abortController.signal,
 });
 

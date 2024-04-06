@@ -1,4 +1,4 @@
-export const towns = [
+export const citys = [
 {value:2000,label:'الكل'},
 {value:0,label:'الرياض'},
 {value:1,label:'مكة المكرمة'},

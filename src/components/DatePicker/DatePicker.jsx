@@ -5,12 +5,12 @@ import { registerLocale } from "react-datepicker";
 import { es } from "date-fns/locale/es";
 registerLocale("es", es);
 
-const DatePicker = ({ selectedDate, setSelectedDate, className }) => {
+const DatePicker = ({ selected, setSelectedDate, className }) => {
   return (
     <ReactDatePicker
       className={className}
-      selected={selectedDate}
-      onChange={(date) => setSelectedDate(date)}
+      selected={selected}
+      onChange={setSelectedDate}
     />
   );
 };
