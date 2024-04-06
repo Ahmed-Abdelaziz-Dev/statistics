@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReportCriteria from "../../components/ReportCriteria/ReportCriteria";
+import BarChart from "../../components/BarChart/BarChart";
 
 const Home = () => {
   const [isShowReportCriteria, setIsShowReportCriteria] = useState(false);
@@ -31,6 +32,7 @@ const Home = () => {
           </div>
         </div>
         {isShowReportCriteria && <ReportCriteria />}
+        <BarChart />
       </div>
     </>
   );

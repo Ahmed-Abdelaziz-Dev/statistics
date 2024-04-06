@@ -8,7 +8,7 @@ registerLocale("es", es);
 const DatePicker = ({ selectedDate, setSelectedDate, className }) => {
   return (
     <ReactDatePicker
-      className="w-full p-1 border-2 border-[#cacaca]"
+      className={className}
       selected={selectedDate}
       onChange={(date) => setSelectedDate(date)}
     />
