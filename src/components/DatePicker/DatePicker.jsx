@@ -6,6 +6,7 @@ import { es } from "date-fns/locale/es";
 registerLocale("es", es);
 
 const DatePicker = ({ selected, setSelectedDate, className }) => {
+  console.log(selected);
   return (
     <ReactDatePicker
       className={className}

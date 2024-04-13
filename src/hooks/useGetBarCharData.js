@@ -1,12 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import statisticsApis from '../api/statistics';
 
-const useGetBarCharData = ({start_date,city,state}) => {
-  const params =  {
-    stat_type: 'number_of_deals', 
-    calendar: 'gregorian', start_date, 
-    state, city
-}
+const useGetBarCharData = params => {
+
 
 const { data, isError, isLoading } = useQuery({
     queryKey: ['all-stats', params],

@@ -6,12 +6,13 @@ import DatePicker from "../DatePicker/DatePicker";
 import { useState } from "react";
 import moment from "moment";
 
-const ReportCriteria = ({ setReportCriteria }) => {
+const ReportCriteria = ({ setReportCriteria, reportCriteria }) => {
   const [selectedOption, setSelectedOption] = useState({
-    value: 2000,
-    label: "الكل",
+    value: 1,
+    label: "الرياض",
   });
   const [selectedDate, setSelectedDate] = useState(new Date());
+  console.log(selectedDate);
   return (
     <div className="font-main mb-10">
       <div
@@ -47,10 +48,8 @@ const ReportCriteria = ({ setReportCriteria }) => {
             <div className="w-1/4">
               <DatePicker
                 className="w-full p-1 border-2 border-[#cacaca]"
-                selected={selectedDate}
-                setSelectedDate={(date) =>
-                  setSelectedDate(moment(date).format("YYYY-MM-DD"))
-                }
+                selected={moment(selectedDate).format("YYYY-MM-DD")}
+                setSelectedDate={(date) => setSelectedDate(date)}
               />
             </div>
           </div>
@@ -62,6 +61,7 @@ const ReportCriteria = ({ setReportCriteria }) => {
               className="text-lg text-red-600 button bg-[#1779ba] text-white py-2" // Assuming that 'text-lg' is equivalent to 1.1rem font-size and red-600 is close to the color #a01a1a
               onClick={() =>
                 setReportCriteria({
+                  ...reportCriteria,
                   start_date: selectedDate,
                   city: selectedOption.label,
                   state: selectedOption.value,

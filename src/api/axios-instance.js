@@ -1,18 +1,15 @@
 import axios from "axios";
 
-const abortController = new AbortController();
 
 const axiosInstance = axios.create({
   baseURL: "https://api.aqarsas.sa/",
-  signal: abortController.signal,
 });
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    config.headers["Content-Type"] = "application/json";
-    config.headers["Access-Control-Allow-Origin"] = "true";
-    config.headers["Access-Control-Allow-Credentials"] = "true";
-
+    config.headers["Accept"] = "*/*";
+    config.headers["Accept-Language"] = "en-GB,en-US;q=0.9,en;q=0.8";
+    config.headers["Content-Type"] = "application/json; charset=UTF-8";
     return config;
   },
   (error) => {
