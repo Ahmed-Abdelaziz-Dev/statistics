@@ -3,10 +3,10 @@ on:
   push:
     branches:
       - main
-  pull:
+  pull_request:
     branches:
       - main
-  workflow_dispatches:
+  workflow_dispatch:
 jobs:
   hello:
     runs-on: ubuntu-latest
@@ -20,6 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: greet world
-        runs: echo "greeting world"
+        run: echo "greeting world"
         shell: bash
 
